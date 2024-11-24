@@ -82,7 +82,8 @@
             <div class="preloader">
                 <div id="handle-preloader" class="handle-preloader">
                     <div class="animation-preloader">
-                        <img src="{{ asset('assets/images/llogo.png')" style="
+                        <img src="{{ asset('assets/images/llogo.png') }}"
+                            style="
                     position: absolute;
                     top: -5%;
                     left: calc(50% - 180px / 2);
