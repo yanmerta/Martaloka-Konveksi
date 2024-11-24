@@ -15,9 +15,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\NotificationController;
 
 // Frontend
-use App\Http\Controllers\Frontend\BerandaController;
-use App\Http\Controllers\Frontend\TransaksiCustomDesignController;
-use App\Http\Controllers\Frontend\TransaksiProdukController;
+use App\Http\Controllers\FrontEnd\BerandaController;
+use App\Http\Controllers\FrontEnd\TransaksiCustomDesignController;
+use App\Http\Controllers\FrontEnd\TransaksiProdukController;
 use App\Http\Controllers\ProfileuserController;
 use App\Http\Controllers\ResponseController;
 use Illuminate\Support\Facades\Route;
