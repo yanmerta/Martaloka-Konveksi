@@ -82,7 +82,7 @@
                     <div class="main-logo-box">
                         <a href="{{ route('beranda') }}">
                             <img style="height: 85px; max-width: 67%; object-fit: contain;"
-                                src="{{ asset('assets/images/logoo2.png') }}" alt="Aska Logo" title="Aska Logo">
+                                src="{{ asset('assets/images/logoo2.png') }}" alt="" title="">
 
                         </a>
                     </div>
