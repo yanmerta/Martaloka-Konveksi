@@ -54,10 +54,9 @@
                                 <h3>Media Sosial</h3>
                             </div>
                             <div class="footer-widget-links">
-                                <ul>
+                                <ul class="social-links">
                                     <li>
-                                        <a
-                                            href="https://www.instagram.com/konveksi_martaloka?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                                        <a href="https://www.instagram.com/konveksi_martaloka?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                                             <span class="icon-right-arrow-2"></span>Instagram
                                         </a>
                                     </li>
@@ -70,6 +69,31 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <style>
+                    /* Khusus untuk mobile */
+                    @media (max-width: 767px) {
+                        .col-xl-4.col-lg-6.col-md-6.col-sm-12 {
+                            display: block !important; /* Override d-flex */
+                            justify-content: start !important; /* Override justify-content-center */
+                        }
+                        
+                        .single-footer-widget {
+                            text-align: left;
+                            padding-left: 15px;
+                        }
+                        
+                        .social-links {
+                            padding: 0;
+                            margin: 0;
+                            list-style: none;
+                        }
+                        
+                        .title {
+                            text-align: left;
+                        }
+                    }
+                    </style>
                     <!--End single footer widget-->
 
 
