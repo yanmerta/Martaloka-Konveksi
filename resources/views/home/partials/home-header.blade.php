@@ -170,8 +170,8 @@
 
                                     @guest
                                         <div class="d-xxl-none d-xl-none d-lg-none">
-                                            <li> <a href="{{route('register')}}">Register</a> </li>
-                                            <li> <a href="{{route('login')}}">Login</a></li>
+                                            <li> <a href="{{ route('register') }}">Register</a> </li>
+                                            <li> <a href="{{ route('login') }}">Login</a></li>
                                         </div>
                                     @endguest
 

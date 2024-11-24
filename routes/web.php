@@ -166,6 +166,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/notifications', [NotificationController::class, 'index']);
         Route::post('/notifications/read/{id}', [NotificationController::class, 'markAsRead']);
         Route::post('/notifications/read-all', [NotificationController::class, 'markAllAsRead']);
+        Route::get('sitemap.xml', [App\Http\Controllers\SitemapController::class, 'index']);
 
 
     });
