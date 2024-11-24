@@ -100,7 +100,7 @@
             <div class="container">
                 <div class="bottom-inner">
                     <div class="copyright">
-                        <p>Copyright &copy; 2024 Martaloka Konveksi</p>
+                        <p>Copyright &copy;TRPL UNDIKSHA 2024</p>
                     </div>
                     <div class="footer-logo-style1">
                         <img style="height: 70px" src="{{ asset('assets/images/logoo2.png') }}" alt="Aska Logo"
