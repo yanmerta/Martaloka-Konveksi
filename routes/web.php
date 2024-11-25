@@ -4,23 +4,25 @@ use App\Http\Controllers\Admin\DashboardController;
 
 // Admin
 use App\Http\Controllers\Admin\KategoriController;
+use App\Http\Controllers\Admin\KontakController;
+use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\ProdukController;
 use App\Http\Controllers\Admin\ProgressCustomController;
 use App\Http\Controllers\Admin\ProgressPembelianController;
 use App\Http\Controllers\Admin\TransaksiCustomDashboardController;
 use App\Http\Controllers\Admin\TransaksiDashboardController;
 use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Admin\KontakController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Admin\NotificationController;
+use App\Http\Controllers\FrontEnd\BerandaController;
 
 // Frontend
-use App\Http\Controllers\FrontEnd\BerandaController;
 use App\Http\Controllers\FrontEnd\TransaksiCustomDesignController;
 use App\Http\Controllers\FrontEnd\TransaksiProdukController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProfileuserController;
 use App\Http\Controllers\ResponseController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
+
 
 
 /*
@@ -40,6 +42,7 @@ Route::get('/detail-produk/{produk}', [BerandaController::class, 'detailProduk']
 Route::view('kontak', 'home.kontak')->name('home.kontak');
 Route::post('kontak/store', [KontakController::class, 'store'])->name('kontak.store');
 Route::view('tentang-kami', 'home.tentang-kami')->name('home.tentang-kami');
+Route::get('sitemap.xml', [SitemapController::class, 'index']);
 
 
 
@@ -166,7 +169,6 @@ Route::middleware('auth')->group(function () {
         Route::get('/notifications', [NotificationController::class, 'index']);
         Route::post('/notifications/read/{id}', [NotificationController::class, 'markAsRead']);
         Route::post('/notifications/read-all', [NotificationController::class, 'markAllAsRead']);
-        Route::get('sitemap.xml', [App\Http\Controllers\SitemapController::class, 'index']);
 
 
     });
