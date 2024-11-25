@@ -13,7 +13,7 @@ use App\Models\TransaksiExport;
 
 
 use Maatwebsite\Excel\Facades\Excel;
-use Barryvdh\DomPDF\Facade\PDF; // Tambahkan ini
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 class TransaksiDashboardController extends Controller

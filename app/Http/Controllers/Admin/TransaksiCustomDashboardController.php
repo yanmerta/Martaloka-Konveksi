@@ -11,7 +11,8 @@ use Carbon\Carbon;
 
 use App\Models\TransaksiCustomExport;
 use Maatwebsite\Excel\Facades\Excel;
-use Barryvdh\DomPDF\Facade\PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
+
 
 class TransaksiCustomDashboardController extends Controller
 {
