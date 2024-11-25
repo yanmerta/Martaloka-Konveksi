@@ -107,7 +107,7 @@
                             <div class="footer-widget-contact-info">
                                 <p>Dusun Abian, Desa Banjar Tegeha, Kec Banjar, Buleleng, Bali</p>
                                 <ul>
-                                    <li><a href="tel:123456789">085847728414</a></li>
+                                    <li><a href="tel:123456789">087764473774</a></li>
                                     <li><a href="mailto:yourmail@email.com">martaloka@gmail.com</a></li>
                                 </ul>
                             </div>

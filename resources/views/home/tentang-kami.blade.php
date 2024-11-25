@@ -136,8 +136,8 @@
                         <div class="col-xl-6">
                             <div class="about-style1-img-box">
                                 <div class="inner">
-                                    <img src="assets/images/Jahit.png" alt="" style="margin-top: 25px;">
-                                    <img src="assets/images/sablon1.jfif" alt="" style="margin-top: 98px;">
+                                    <img src="assets/images/jahit2.png" alt="" style="margin-top: 20px;">
+                                    <img src="assets/images/sablon1.jfif" alt="" style="margin-top: 47px;">
                                 </div>
                             </div>
                         </div>

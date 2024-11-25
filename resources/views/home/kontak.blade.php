@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="text">
                                         <h3>Kontak</h3>
-                                        <p>Ph: <a href="tel:085847728414">085847728414</a> & Mail: <a
+                                        <p>Ph: <a href="tel:085847728414">087764473774</a> & Mail: <a
                                                 href="mailto:martaloka@gmail.com">martaloka@gmail.com</a></p>
                                     </div>
                                 </div>
