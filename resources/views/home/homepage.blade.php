@@ -102,7 +102,7 @@
                                         mandiri,
                                         kami dapat memotong biaya dan waktu sehingga konsumen kami dapat menerima manfaat
                                         layanan kami sebagai “Tangan Pertama Anda”. Dapatkan produk kaos berkualitas dengan
-                                        harga yang hemat dan hemat waktu hanya di martaloka.co.id.</p>
+                                        harga yang hemat dan hemat waktu hanya di martaloka-konveksi.com</p>
                                 </div>
                             </div>
                             <div class="academics-overview-style1-img-box"
