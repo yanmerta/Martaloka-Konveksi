@@ -9,7 +9,7 @@
                             <h6 class="font-weight-bold d-inline mb-2">Bukti Pembayaran</h6>
                             <div class="d-flex justify-content-center mt-3">
                                 <img class="img-fluid" style="max-height: 400px; object-fit:fill;"
-                                    src="{{ asset('bukti_Pembayaran/' . $transaksi->bukti_pembayaran) }}"
+                                    src="{{ asset('bukti_pembayaran/' . $transaksi->bukti_pembayaran) }}"
                                     alt="Bukti pembayaran {{ $transaksi->bukti_pembayaran }}">
                             </div>
 
@@ -101,7 +101,8 @@
                             <ul>
                                 @foreach ($transaksi->progress as $index => $item)
                                     <li class="mb-3">
-                                        <h6 class="font-weight-bold">{{ $item->nama_progress }} {!! $index == 0 ? '<span class="badge badge-success"> Status terakhir </span>' : '' !!}</h6>
+                                        <h6 class="font-weight-bold">{{ $item->nama_progress }} {!! $index == 0 ? '<span class="badge badge-success"> Status terakhir </span>' : '' !!}
+                                        </h6>
 
                                         {{ \Carbon\Carbon::parse($item->created_at)->isoFormat('dddd, D MMMM Y H:mm:ss') }}
                                         <br>

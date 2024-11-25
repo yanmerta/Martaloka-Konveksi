@@ -47,7 +47,7 @@
                         </td>
                         <td> Rp. {{ number_format($data->total_harga) }}</td>
                         <td>
-                            <a href="{{ asset('bukti_Pembayaran/' . $data->bukti_pembayaran) }}"
+                            <a href="{{ asset('bukti_pembayaran/' . $data->bukti_pembayaran) }}"
                                 class="btn btn-outline-info">Bukti pembayaran</a>
                         </td>
                         <td>

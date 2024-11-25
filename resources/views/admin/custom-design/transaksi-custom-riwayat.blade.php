@@ -35,7 +35,7 @@
                             @endif
                         </td>
                         <td>
-                            {{$data->total_pesanan}}
+                            {{ $data->total_pesanan }}
                             {{-- <ul class="list-unstyled">
                                 @foreach ($data->detailTransaksi as $detailTransaksi)
                                     <li> <b>{{ $detailTransaksi->produk->nama_produk }} </b> <b>-</b>
@@ -48,7 +48,7 @@
                         </td>
                         <td> Rp. {{ number_format($data->total_harga) }}</td>
                         <td>
-                            <a href="{{ asset('bukti_Pembayaran/' . $data->bukti_pembayaran) }}"
+                            <a href="{{ asset('bukti_pembayaran/' . $data->bukti_pembayaran) }}"
                                 class="btn btn-outline-info">Bukti pembayaran</a>
                         </td>
                         <td>

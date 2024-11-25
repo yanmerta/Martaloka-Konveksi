@@ -174,7 +174,7 @@
                                                         class="fs-1 fw-bold text-lg-left text-xxl-left text-xl-left text-sm-center ml-3">
                                                         Bukti Pembayaran</p>
                                                     <div class="d-flex justify-content-center">
-                                                        <img src="{{ asset('bukti_Pembayaran/' . $transaksi->bukti_pembayaran) }}"
+                                                        <img src="{{ asset('bukti_pembayaran/' . $transaksi->bukti_pembayaran) }}"
                                                             style="max-height: 250px;"
                                                             alt="{{ $transaksi->bukti_pembayaran }}">
 
