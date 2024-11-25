@@ -56,7 +56,7 @@
                     <!-- Slide -->
                     <div class="slide">
                         <div class="image-layer"
-                            style="background-image:url({{ asset('assets/images/slider/sablon.png') }})">
+                            style="background-image:url({{ asset('assets/images/slider/Sablon.png') }})">
                         </div>
                         <div class="auto-container">
                             <div class="content">
@@ -269,7 +269,7 @@
                                     <a class="btn-one btn-one--style4" href="#" onclick="showAndPlayVideo(event)">
                                         <span class="txt">
                                             <i class="icon-right-arrow-1"></i>
-                                            Desain
+                                            Mendesain Baju
                                         </span>
                                     </a>
                                 </div>
