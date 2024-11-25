@@ -298,7 +298,7 @@
                                     <a class="btn-one btn-one--style4" href="{{ route('home.createDesign') }}">
                                         <span class="txt">
                                             <i class="icon-right-arrow-1"></i>
-                                           Pesan
+                                           Pesan Custom
                                         </span>
                                     </a>
                                 </div>
