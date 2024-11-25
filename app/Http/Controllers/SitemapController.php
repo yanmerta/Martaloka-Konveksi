@@ -10,7 +10,7 @@ class SitemapController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
+        $products = Produk::all();
         $categories = Kategori::all();
         
         return response()->view('sitemap', [
