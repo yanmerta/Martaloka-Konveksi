@@ -160,14 +160,15 @@
                                 @break
 
                                 @case('Dibayar')
-                                    <button href="#" class="btn btn-block btn-info terimaTransaksi"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                        data-transaksi-id="{{ $data->id }}">Terima transaksi</button>
+                                    <button href="#" class="btn btn-block btn-info terimaTransaksi" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" data-transaksi-id="{{ $data->id }}">Terima
+                                        transaksi</button>
                                     <button href="#" class="btn btn-block btn-danger" id="tolakTransaksi"
                                         data-bs-toggle="modal" data-bs-target="#tolakModal"
                                         data-transaksi-id="{{ $data->id }}">Tolak
                                         transaksi</button>
                                 @break
+
                                 @case('Diterima')
                                     <a href="{{ route('transaksi.selesaikan', $data->id) }}"
                                         class="btn btn-block btn-success">Selesaikan Transaksi</a>
@@ -245,12 +246,13 @@
                         <div class="pick-up d-none" id="pick-up">
 
                             <div class="mb-3">
-                                <label  class="form-label">Alamat Martaloka Konveksi</label>
+                                <label class="form-label">Alamat Martaloka Konveksi</label>
                                 <textarea class="form-control" name="" id="" cols="30" rows="3" readonly>Jalan Banteng, Banjar, Kec. Banjar, Kabupaten Buleleng, Bali 81152</textarea>
                             </div>
                             <div class="mb-3">
-                                <label  class="form-label">Tanggal dan Jam Ambil</label>
-                                <input type="datetime-local" class="form-control" id="tanggal_ambil" name="tanggal_ambil">
+                                <label class="form-label">Tanggal dan Jam Ambil</label>
+                                <input type="datetime-local" class="form-control" id="tanggal_ambil"
+                                    name="tanggal_ambil">
                             </div>
 
                         </div>
