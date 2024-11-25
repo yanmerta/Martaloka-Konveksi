@@ -1,2 +1,9 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Larang akses ke folder admin
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+
+Sitemap: https://martaloka-konveksi.com/sitemap.xml

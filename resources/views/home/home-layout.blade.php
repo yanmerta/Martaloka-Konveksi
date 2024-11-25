@@ -80,30 +80,30 @@
     <div class="boxed_wrapper ltr">
         <div class="loader-wrap">
             <div class="preloader">
-              <div class="preloader-close">X</div>
-              <div id="handle-preloader" class="handle-preloader">
-                <div class="animation-preloader">
-                    <img src="assets/images/llogo.png" style="
+                <div id="handle-preloader" class="handle-preloader">
+                    <div class="animation-preloader">
+                        <img src="{{ asset('assets/images/llogo.png') }}"
+                            style="
                     position: absolute;
                     top: -5%;
                     left: calc(50% - 180px / 2);
                     width: 180px;">
-                  <div class="spinner"></div>
-                  <div class="txt-loading">
-                    <span data-text-preloader="m" class="letters-loading">m</span>
-                    <span data-text-preloader="a" class="letters-loading">a</span>
-                    <span data-text-preloader="r" class="letters-loading">r</span>
-                    <span data-text-preloader="t" class="letters-loading">t</span>
-                    <span data-text-preloader="a" class="letters-loading">a</span>
-                    <span data-text-preloader="l" class="letters-loading">l</span>
-                    <span data-text-preloader="o" class="letters-loading">o</span>
-                    <span data-text-preloader="k" class="letters-loading">k</span>
-                    <span data-text-preloader="a" class="letters-loading">a</span>
-                  </div>
+                        <div class="spinner"></div>
+                        <div class="txt-loading">
+                            <span data-text-preloader="m" class="letters-loading">m</span>
+                            <span data-text-preloader="a" class="letters-loading">a</span>
+                            <span data-text-preloader="r" class="letters-loading">r</span>
+                            <span data-text-preloader="t" class="letters-loading">t</span>
+                            <span data-text-preloader="a" class="letters-loading">a</span>
+                            <span data-text-preloader="l" class="letters-loading">l</span>
+                            <span data-text-preloader="o" class="letters-loading">o</span>
+                            <span data-text-preloader="k" class="letters-loading">k</span>
+                            <span data-text-preloader="a" class="letters-loading">a</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
 
         @include('home.partials.home-header')
 
