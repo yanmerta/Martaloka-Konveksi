@@ -10,12 +10,12 @@ class SitemapController extends Controller
 {
     public function index()
     {
-        $produks = Produk::all();
-        $kategoris = Kategori::all();
+        $products = Produk::all();
+        $categories = Kategori::all();
         
         return response()->view('sitemap', [
-            'produk' => $produks,
-            'kategori' => $kategoris
+            'produk' => $products,
+            'kategori' => $categories
         ])->header('Content-Type', 'text/xml');
     }
 }
