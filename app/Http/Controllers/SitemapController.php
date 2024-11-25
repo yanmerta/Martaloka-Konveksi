@@ -14,8 +14,8 @@ class SitemapController extends Controller
         $categories = Kategori::all();
         
         return response()->view('sitemap', [
-            'produk' => $products,
-            'kategori' => $categories
+            'products' => $products,
+            'categories' => $categories
         ])->header('Content-Type', 'text/xml');
     }
 }
