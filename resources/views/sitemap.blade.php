@@ -8,20 +8,20 @@
     </url>
 
     <!-- Products URLs -->
-    @foreach ($products as $product)
+    @foreach ($produks as $produk)
         <url>
-            <loc>{{ url('/product/' . $product->slug) }}</loc>
-            <lastmod>{{ $product->updated_at->toAtomString() }}</lastmod>
+            <loc>{{ url('/product/' . $produk->slug) }}</loc>
+            <lastmod>{{ $produk->updated_at->toAtomString() }}</lastmod>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
         </url>
     @endforeach
 
     <!-- Categories URLs -->
-    @foreach ($categories as $category)
+    @foreach ($kategoris as $kategori)
         <url>
-            <loc>{{ url('/category/' . $category->slug) }}</loc>
-            <lastmod>{{ $category->updated_at->toAtomString() }}</lastmod>
+            <loc>{{ url('/kategori/' . $kategori->slug) }}</loc>
+            <lastmod>{{ $kategori->updated_at->toAtomString() }}</lastmod>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
         </url>
