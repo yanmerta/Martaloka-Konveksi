@@ -138,12 +138,21 @@
     <div class="header">
         <h1 class="main-title">Laporan Pendapatan Dashboard</h1>
         <p class="sub-title">
-            Periode: {{ $selectedYear }}
+            @if ($selectedMonth)
+                Periode: {{ $selectedMonth }} {{ $selectedYear }}
+            @else
+                Periode: Tahun {{ $selectedYear }}
+            @endif
         </p>
     </div>
 
     <div class="filter-info">
         <strong>Tanggal Cetak:</strong> {{ now()->format('d/m/Y H:i') }}
+        @if ($selectedMonth)
+            <br><strong>Filter:</strong> Bulan {{ $selectedMonth }} Tahun {{ $selectedYear }}
+        @else
+            <br><strong>Filter:</strong> Keseluruhan Tahun {{ $selectedYear }}
+        @endif
     </div>
 
     <div class="stats-container">
