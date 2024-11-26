@@ -84,6 +84,12 @@
 
         </div>
 
+        {{-- popup Berhasil login --}}
+        @if (session()->has('loginSuccess'))
+            @include('admin.partials.popup-login-success')
+        @endif
+
+
         <!-- jQuery -->
         <script src="{{ asset('admin/dist/plugins/jquery/jquery.min.js') }}"></script>
         <!-- jQuery UI 1.11.4 -->

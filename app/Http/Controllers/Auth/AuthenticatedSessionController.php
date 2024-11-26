@@ -12,7 +12,7 @@ use Illuminate\View\View;
 
 class AuthenticatedSessionController extends Controller
 {
-    /**
+     /**
      * Display the login view.
      */
     public function create(): View
@@ -24,13 +24,18 @@ class AuthenticatedSessionController extends Controller
      * Handle an incoming authentication request.
      */
     public function store(LoginRequest $request): RedirectResponse
-    {
-        $request->authenticate();
+{
+    $request->authenticate();
 
-        $request->session()->regenerate();
+    $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
-    }
+    // Tambahkan debug
+    \Log::info('Login Success Session Set');
+
+    $request->session()->flash('loginSuccess', true);
+
+    return redirect()->intended(RouteServiceProvider::HOME);
+}
 
     /**
      * Destroy an authenticated session.
