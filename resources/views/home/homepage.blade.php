@@ -13,8 +13,15 @@
                         <div class="auto-container">
                             <div class="content">
                                 <div class="big-title">
-                                    <h2>Selamat Datang<br>di Martaloka Konveksi</h2>
+                                    <h2>Selamat Datang di
+                                        Martaloka Konveksi
+                                    </h2>
                                 </div>
+                                <style>
+                                    .big-title h2 {
+                                        white-space: pre-line; /* Membuat line breaks dari spasi/enter di HTML terlihat */
+                                    }
+                                </style>
                                 <div class="text">
                                     <p>Konveksi kami menawarkan solusi pembuatan berbagai pakaian</p>
                                 </div>
@@ -61,8 +68,15 @@
                         <div class="auto-container">
                             <div class="content">
                                 <div class="big-title">
-                                    <h2>Gaya Anda<br>Karya Kami</h2>
+                                    <h2>Gaya Anda
+                                        Karya Kami
+                                    </h2>
                                 </div>
+                                <style>
+                                    .big-title h2 {
+                                        white-space: pre-line;
+                                    }
+                                </style>
                                 <div class="text">
                                     <p>Tingkatkan Penampilan Anda dengan Pilihan yang Luar Biasa</p>
                                 </div>
