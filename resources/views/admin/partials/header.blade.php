@@ -7,6 +7,8 @@
             </a>
         </li>
     </ul>
+    <!-- Center: Date and Time -->
+    <div class="navbar-text d-flex align-items-center" id="date-time" style="font-size: 15px; font-weight: 600;"></div>
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto d-flex align-items-center">
         <!-- Notification Dropdown -->
@@ -122,6 +124,14 @@
         width: 300px;
         max-height: 400px;
         overflow-y: auto;
+    }
+
+
+    #date-time {
+        font-size: 16px;
+        color: #555;
+        margin-left: 15px;
+        /* Adjust spacing */
     }
 </style>
 
@@ -248,5 +258,31 @@
         // Load notifications initially and set refresh interval
         loadNotifications();
         setInterval(loadNotifications, 30000); // Refresh every 30 seconds
+        // Function to update date and time
+        function updateDateTime() {
+            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+            const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus",
+                "September", "Oktober", "November", "Desember"
+            ];
+
+            const now = new Date();
+            const day = days[now.getDay()];
+            const date = now.getDate();
+            const month = months[now.getMonth()];
+            const year = now.getFullYear();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            // Format: "Senin, 26 November 2024 | 12:34:56"
+            const formattedDateTime = `${day}, ${date} ${month} ${year} | ${hours}:${minutes}:${seconds}`;
+
+            // Update the element
+            document.getElementById("date-time").innerText = formattedDateTime;
+        }
+
+        // Run the function every second
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); // Initialize immediately
     });
 </script>

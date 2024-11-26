@@ -83,6 +83,7 @@
             <!-- ./wrapper -->
 
         </div>
+        @include('admin.partials.footer')
 
         {{-- popup Berhasil login --}}
         @if (session()->has('loginSuccess'))
