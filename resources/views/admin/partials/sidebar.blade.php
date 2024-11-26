@@ -160,7 +160,7 @@
 
                 <li class="nav-item">
                     <a href="{{ route('progress-custom.index') }}"
-                        class="nav-link {{ Request::is('transaksi/progress-custom') ? 'active' : '' }}">
+                        class="nav-link {{ request()->routeIs('progress-custom.index') ? 'menu-open active' : '' }}">
                         <i class="nav-icon fas fa-project-diagram"></i>
                         <p>Progress Custom Design</p>
                     </a>

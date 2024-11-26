@@ -174,7 +174,10 @@ class TransaksiDashboardController extends Controller
 
         // dd($transaksi);
 
-        return view('admin.transaksi.transaksi-detail', compact('transaksi'));
+        return view('admin.transaksi.transaksi-detail', [
+            'judul' => 'Detail Transaksi Produk',
+            'transaksi' => $transaksi,
+        ]);        
     }
 
 

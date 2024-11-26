@@ -139,7 +139,7 @@
                             @if ($data->bukti_pembayaran == null)
                                 Belum ada
                             @else
-                                <a href="{{ asset('bukti_Pembayaran/' . $data->bukti_pembayaran) }}"
+                                <a href="{{ asset('bukti_pembayaran/' . $data->bukti_pembayaran) }}"
                                     class="btn btn-info btn-lg">
                                     <i class="fa fa-image" aria-hidden="true"></i></a>
                             @endif
