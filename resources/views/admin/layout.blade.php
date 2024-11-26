@@ -39,6 +39,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('assets/css/dark-mode.css') }}">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -83,7 +84,6 @@
             <!-- ./wrapper -->
 
         </div>
-        @include('admin.partials.footer')
 
         {{-- popup Berhasil login --}}
         @if (session()->has('loginSuccess'))
@@ -92,6 +92,8 @@
 
 
         <!-- jQuery -->
+        <!-- Dark Mode Script -->
+        <script src="{{ asset('assets/js/dark-mode.js') }}"></script>
         <script src="{{ asset('admin/dist/plugins/jquery/jquery.min.js') }}"></script>
         <!-- jQuery UI 1.11.4 -->
         <script src="{{ asset('admin/dist/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
@@ -158,6 +160,9 @@
                 }, 3000); // 3000 ms = 3 seconds
             });
         </script>
+    </div>
+    {{-- @include('admin.partials.footer') --}}
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

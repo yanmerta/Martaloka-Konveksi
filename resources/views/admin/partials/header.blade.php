@@ -9,6 +9,14 @@
     </ul>
     <!-- Center: Date and Time -->
     <div class="navbar-text d-flex align-items-center" id="date-time" style="font-size: 15px; font-weight: 600;"></div>
+
+    <li class="nav-item mr-25">
+        <a class="nav-link nav-link-style" data-toggle="tooltip" data-placement="top" title="Ganti Tema">
+            <i id="theme-icon-a" class="ficon" data-feather="sun" style="display:none;"></i>
+            <i id="theme-icon-b" class="ficon" data-feather="moon"></i>
+        </a>
+    </li>
+
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto d-flex align-items-center">
         <!-- Notification Dropdown -->
@@ -65,7 +73,7 @@
 <!-- Custom CSS -->
 <style>
     .navbar-nav .nav-item {
-        margin-left: 10px;
+        margin-left: 8px;
     }
 
     .user-panel .info {
@@ -132,6 +140,36 @@
         color: #555;
         margin-left: 15px;
         /* Adjust spacing */
+    }
+
+    .nav-item.mr-25 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-link.nav-link-style {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: transparent;
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ficon {
+        font-size: 20px;
+        line-height: 1;
+        display: inline-block;
+        color: inherit;
+        margin: 0;
+        padding: 0;
     }
 </style>
 
@@ -285,4 +323,8 @@
         setInterval(updateDateTime, 1000);
         updateDateTime(); // Initialize immediately
     });
+</script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+    feather.replace()
 </script>

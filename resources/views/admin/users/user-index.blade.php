@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid px-2">
         <div class="card shadow border-5 mb-4">
-            <div class="card-header bg-white py-3">
+            <div class="card-header">
                 <div class="d-flex justify-content-between align-items-center">
                     {{-- <h5 class="mb-0 text-black fw-bold">Management User</h5> --}}
                     <a href="{{ route('users.create') }}" class="btn btn-success btn-sm">
