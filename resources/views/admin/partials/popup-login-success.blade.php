@@ -17,14 +17,13 @@
                 </p>
                 <div class="d-grid">
                     @can('owner')
-                        <a href="{{ route('dashboard') }}" class="btn btn-success btn-lg" data-dismiss="modal">
+                        <a href="{{ route('dashboard') }}" class="btn btn-success btn-lg">
                             Lanjutkan ke Dashboard
                             <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     @else
-                        <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">
+                        <button type="button" class="btn btn-secondary btn-lg" id="okButton">
                             OK
-                            {{-- <i class="fas fa-check ml-2"></i> --}}
                         </button>
                     @endcan
                 </div>
@@ -45,10 +44,15 @@
             // Tampilkan modal
             $('#loginSuccessModal').modal('show');
 
+            // Atur event tombol OK
+            $('#okButton').on('click', function() {
+                $('#loginSuccessModal').modal('hide'); // Tutup modal secara manual
+            });
+
             // Atur timeout untuk menutup modal otomatis
             setTimeout(function() {
                 $('#loginSuccessModal').modal('hide');
-            }, 5000);
+            }, 10000); // 5 detik
         });
     </script>
 @endpush
