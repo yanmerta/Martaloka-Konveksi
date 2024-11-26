@@ -152,8 +152,11 @@ class TransaksiCustomDashboardController extends Controller
 
         // dd($transaksi);
 
-        return view('admin.custom-design.transaksi-custom-detail', compact('transaksi'));
-    }
+        return view('admin.custom-design.transaksi-custom-detail', [
+            'judul' => 'Detail Transaksi Custom Design',
+            'transaksi' => $transaksi, 
+        ]);
+    }    
 
 
     public function terima(Request $request)
