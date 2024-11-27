@@ -137,3 +137,56 @@ body.dark-mode .dropdown-menu {
     background-color: #2c2c2c;
     border-color: #444;
 }
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.dark-mode #content-wrapper {
+    min-height: 100vh !important;
+    margin-left: 250px;
+    background-color: #252525;
+}
+/* Footer di Mode Malam */
+body.dark-mode .main-footer {
+    background-color: #252525;
+    color: #e0e0e0; /* Teks terang */
+    border-top: 1px solid #333; /* Border atas */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .main-footer a {
+    color: #ffffff; /* Warna link di footer */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .main-footer a:hover {
+    color: #0099ff; /* Warna link saat hover */
+}
+/* Dark mode untuk input range tanggal */
+body.dark-mode .form-control {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #555;
+}
+
+body.dark-mode .daterangepicker {
+    background-color: #1e1e1e; /* Background hitam */
+    color: #e0e0e0; /* Teks terang */
+}
+
+body.dark-mode .daterangepicker .calendar-table {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .daterangepicker .ranges li.active {
+    background-color: #333;
+    color: #fff;
+}

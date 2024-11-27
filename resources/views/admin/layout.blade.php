@@ -55,6 +55,7 @@
             margin-left: unset;
         }
     }
+
     @media only screen and (max-width: 600px) {
         #content-wrapper {
 
@@ -83,7 +84,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="ml-1">{{ $judul ?? 'Dashboard' }}</h1>
+                            <h1 class="ml-0">{{ $judul ?? 'Dashboard' }}</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
