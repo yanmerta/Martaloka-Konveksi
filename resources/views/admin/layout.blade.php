@@ -41,6 +41,28 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
+<style>
+    #content-wrapper {
+        min-height: 100vh !important;
+        margin-left: 250px;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+        #content-wrapper {
+
+            margin-left: unset;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        #content-wrapper {
+
+            margin-left: unset;
+        }
+    }
+</style>
+
+
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
@@ -54,7 +76,7 @@
         @include('admin.partials.sidebar')
 
 
-        <div class="content-wrapper">
+        <div id="content-wrapper">
 
             <div class="content-header">
                 <div class="container-fluid">
@@ -158,7 +180,7 @@
                 }, 3000); // 3000 ms = 3 seconds
             });
         </script>
-
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 @stack('scripts')

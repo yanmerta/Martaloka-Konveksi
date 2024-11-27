@@ -68,6 +68,8 @@
                 <tr>
                     <th scope="col" style="width: 70px">#</th>
                     <th scope="col">Nama Kategori</th>
+                    <th scope="col">Harga Kategori</th>
+
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -76,6 +78,7 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $data->nama_kategori }}</td>
+                        <td>Rp.{{ number_format($data->harga_kategori)}}</td>
                         <td>
                             <a href="{{ route('kategori.edit', $data->id) }}" class="btn btn-primary">
                                 <i class="fas fa-edit"></i> Edit
