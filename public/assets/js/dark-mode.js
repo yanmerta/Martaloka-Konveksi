@@ -1,19 +1,16 @@
 // Terapkan tema langsung sebelum halaman selesai dimuat
 (function () {
     const storedTheme = localStorage.getItem("preferred-theme");
-    const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-    ).matches;
-    const isNight = new Date().getHours() >= 18 || new Date().getHours() < 6;
 
-    // Gunakan tema tersimpan, atau deteksi dari preferensi sistem dan waktu
-    const theme = storedTheme
-        ? storedTheme
-        : prefersDark
-        ? "dark"
-        : isNight
-        ? "dark"
-        : "light";
+    // Fungsi untuk menentukan tema berdasarkan waktu
+    function getTimeBasedTheme() {
+        const currentHour = new Date().getHours();
+        // Mode malam dari jam 18:00 (6 PM) sampai 06:00 (6 AM)
+        return currentHour >= 18 || currentHour < 6 ? "dark" : "light";
+    }
+
+    // Gunakan tema tersimpan, atau tentukan tema berdasarkan waktu
+    const theme = storedTheme ? storedTheme : getTimeBasedTheme();
 
     if (theme === "dark") {
         document.body.classList.add("dark-mode");
@@ -23,11 +20,11 @@
 })();
 
 $(document).ready(function () {
-    // Fungsi untuk mendeteksi tema sistem
-    function detectColorScheme() {
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
+    // Fungsi untuk menentukan tema berdasarkan waktu
+    function getTimeBasedTheme() {
+        const currentHour = new Date().getHours();
+        // Mode malam dari jam 18:00 (6 PM) sampai 06:00 (6 AM)
+        return currentHour >= 18 || currentHour < 6 ? "dark" : "light";
     }
 
     // Fungsi untuk menerapkan tema
@@ -53,12 +50,8 @@ $(document).ready(function () {
         if (storedTheme) {
             applyTheme(storedTheme);
         } else {
-            const systemPreference = detectColorScheme();
-            const timeBasedTheme =
-                new Date().getHours() >= 18 || new Date().getHours() < 6
-                    ? "dark"
-                    : "light";
-            const theme = systemPreference === "dark" ? "dark" : timeBasedTheme;
+            // Gunakan tema berdasarkan waktu jika tidak ada tema tersimpan
+            const theme = getTimeBasedTheme();
             applyTheme(theme);
         }
     }
@@ -69,12 +62,17 @@ $(document).ready(function () {
         applyTheme(currentTheme);
     });
 
-    // Event listener untuk perubahan tema sistem
-    window.matchMedia("(prefers-color-scheme: dark)").addListener(function (e) {
+    // Event listener untuk memeriksa dan memperbarui tema setiap menit
+    function checkAndUpdateTheme() {
+        // Jika tidak ada tema tersimpan secara manual, gunakan tema berdasarkan waktu
         if (!localStorage.getItem("preferred-theme")) {
-            applyTheme(e.matches ? "dark" : "light");
+            const theme = getTimeBasedTheme();
+            applyTheme(theme);
         }
-    });
+    }
+
+    // Periksa tema setiap menit
+    setInterval(checkAndUpdateTheme, 60000);
 
     // Inisialisasi tema
     initTheme();
