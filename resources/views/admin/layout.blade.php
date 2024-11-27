@@ -119,6 +119,12 @@
         background-color: #333;
         color: #fff;
     }
+
+    body.dark-mode .form-control {
+        background-color: #252525 !important;
+        color: #e0e0e0 !important;
+        border-color: #555 !important;
+    }
 </style>
 
 

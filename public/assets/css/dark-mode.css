@@ -141,8 +141,8 @@ body.dark-mode {
     background-color: #1a1a1a;
     color: #f0f0f0;
 }
-body.dark-mode .form-control {
+/* body.dark-mode .form-control {
     background-color: #252525 !important;
     color: #e0e0e0 !important;
     border-color: #555 !important;
-}
+} */
