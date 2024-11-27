@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-red elevation-4" style="background-color: #1e1d1e">
+<aside class="main-sidebar sidebar-dark-red elevation-4" style="background-color: #252525">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
         {{-- <img src="{{ asset('auth-views/assets/media/logos/icon-logo.png') }}" alt="" class="brand-image"

@@ -93,7 +93,7 @@
 
     /* Dark mode untuk input range tanggal */
     body.dark-mode .form-control {
-        background-color: #1a1a1a;
+        background-color: #252525;
         color: #e0e0e0;
         border: 1px solid #333;
         transition: background-color 0.3s ease, color 0.3s ease;
@@ -104,14 +104,14 @@
     }
 
     body.dark-mode .daterangepicker {
-        background-color: #1e1e1e;
+        background-color: #252525;
         /* Background hitam */
         color: #e0e0e0;
         /* Teks terang */
     }
 
     body.dark-mode .daterangepicker .calendar-table {
-        background-color: #1a1a1a;
+        background-color: #252525;
         color: #e0e0e0;
     }
 
