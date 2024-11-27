@@ -112,6 +112,7 @@
             @include('admin.partials.popup-login-success')
         @endif
 
+        @include('admin.partials.footer')
 
         <!-- jQuery -->
         <!-- Dark Mode Script -->
@@ -183,12 +184,10 @@
             });
         </script>
     </div>
-<<<<<<< HEAD
-=======
-    {{-- @include('admin.partials.footer') --}}
 
 
->>>>>>> d8187ab48ab116f195874902d76c5c66079fa804
+
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 @stack('scripts')
