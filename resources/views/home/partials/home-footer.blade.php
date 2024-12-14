@@ -56,7 +56,8 @@
                             <div class="footer-widget-links">
                                 <ul class="social-links">
                                     <li>
-                                        <a href="https://www.instagram.com/konveksi_martaloka?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                                        <a
+                                            href="https://www.instagram.com/konveksi_martaloka?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                                             <span class="icon-right-arrow-2"></span>Instagram
                                         </a>
                                     </li>
@@ -69,30 +70,32 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <style>
-                    /* Khusus untuk mobile */
-                    @media (max-width: 767px) {
-                        .col-xl-4.col-lg-6.col-md-6.col-sm-12 {
-                            display: block !important; /* Override d-flex */
-                            justify-content: start !important; /* Override justify-content-center */
+                        /* Khusus untuk mobile */
+                        @media (max-width: 767px) {
+                            .col-xl-4.col-lg-6.col-md-6.col-sm-12 {
+                                display: block !important;
+                                /* Override d-flex */
+                                justify-content: start !important;
+                                /* Override justify-content-center */
+                            }
+
+                            .single-footer-widget {
+                                text-align: left;
+                                padding-left: 15px;
+                            }
+
+                            .social-links {
+                                padding: 0;
+                                margin: 0;
+                                list-style: none;
+                            }
+
+                            .title {
+                                text-align: left;
+                            }
                         }
-                        
-                        .single-footer-widget {
-                            text-align: left;
-                            padding-left: 15px;
-                        }
-                        
-                        .social-links {
-                            padding: 0;
-                            margin: 0;
-                            list-style: none;
-                        }
-                        
-                        .title {
-                            text-align: left;
-                        }
-                    }
                     </style>
                     <!--End single footer widget-->
 
@@ -107,8 +110,10 @@
                             <div class="footer-widget-contact-info">
                                 <p>Dusun Abian, Desa Banjar Tegeha, Kec Banjar, Buleleng, Bali</p>
                                 <ul>
-                                    <li><a href="tel:123456789">087764473774</a></li>
-                                    <li><a href="mailto:yourmail@email.com">martaloka@gmail.com</a></li>
+                                    <li><a href="https://wa.me/6287764473774" target="_blank">087764473774</a></li>
+                                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=martaloka@gmail.com"
+                                            target="_blank">martaloka@gmail.com</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -124,7 +129,7 @@
             <div class="container">
                 <div class="bottom-inner">
                     <div class="copyright">
-                        <p>Copyright &copy;TRPL UNDIKSHA 2024</p>
+                        <p>Copyright &copy;Martaloka Konveksi 2024</p>
                     </div>
                     <div class="footer-logo-style1">
                         <img style="height: 70px" src="{{ asset('assets/images/logoo2.png') }}" alt="Aska Logo"
