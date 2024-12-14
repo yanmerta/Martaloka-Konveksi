@@ -49,7 +49,7 @@
                                     @default
                                     <a href="{{ route('home.formPembayaranTransaksiCustom', $item->id) }}" class="text-dark">
                                         @endswitch --}}
-                                        <a href="{{ route('home.formPembayaranTransaksiCustom', $item->id) }}" class="text-dark">
+                                <a href="{{ route('home.formPembayaranTransaksiCustom', $item->id) }}" class="text-dark">
 
                                     <div class="card border shadow-none my-2">
                                         <div class="card-body">

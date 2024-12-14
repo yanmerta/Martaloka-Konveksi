@@ -9,7 +9,7 @@
                             <h6 class="font-weight-bold d-inline mb-2">Bukti Pembayaran</h6>
                             <div class="d-flex justify-content-center mt-3">
                                 <img class="img-fluid" style="max-height: 400px; object-fit:fill;"
-                                    src="{{ asset('bukti_pembayaran/' . $transaksi->bukti_pembayaran) }}"
+                                    src="{{ asset('custom_designs/bukti-bayar/' . $transaksi->bukti_pembayaran) }}"
                                     alt="Bukti pembayaran {{ $transaksi->bukti_pembayaran }}">
                             </div>
 

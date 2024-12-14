@@ -302,62 +302,60 @@
                     </div>
 
 
-                    <div class="col-12 px-xxl-5 px-xl-5 px-lg-5 my-3">
-                        <div class="row">
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                                <div class="d-flex justify-content-md-center justify-content-sm-center">
-                                    <img src="{{ asset('assets/images/sponsor/bajur.png') }}" alt="Awesome Image"
-                                        class="small-image" style="width: 18rem; height: auto;">
-                                </div>
-
-                            </div>
-
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                                <div class="d-flex justify-content-md-center justify-content-sm-center">
-
-                                    <img src="{{ asset('assets/images/sponsor/bajuk.png') }}" alt="Awesome Image"
-                                        class="small-image" style="width: 18rem; height: auto;">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div style="margin-left: -360px; margin-top: 50px;">
-                            <span>Contoh Gambar Yang Diupload.</span>
+                    <div class="container my-4">
+                        <!-- Tulisan di atas gambar -->
+                        <div class="text-start mb-3" style="padding-left: 0; margin-left: -90px;">
+                            <span style="font-weight: font-size: 18px;">Contoh Gambar Yang Diupload!</span>
                         </div>
 
 
 
-                        <div class="col-12 px-xxl-5 px-xl-5 px-lg-5 my-3">
-                            <h3 class="mb-2">Gambar</h3>
+                        <!-- Wrapper Gambar (Flexbox ke Kiri) -->
+                        <div class="d-flex align-items" style="gap: 20px;">
+                            <!-- Gambar 1 -->
+                            <div class="text-start">
+                                <img src="{{ asset('assets/images/sponsor/bajur.png') }}" alt="Gambar 1"
+                                    style="width: 10rem; height: auto;">
+                            </div>
 
-                            <input type="file" name="gambar_custom_design[]" accept="image/*" class="image-input" />
-                            <br>
-                            <label>Gambar maksimal 2 MB</label>
-
-                            <img id="preview" src="#" alt="Preview Image"
-                                style="display:none; max-width: 200px; margin-top: 10px;" />
-                            <div id="newRowImage"></div>
-
-                            <button id="addRow" type="button" class="btn btn-sm btn-secondary mb-4 mt-5">Tambah
-                                Gambar</button>
-                            <button id="removeRow" type="button"
-                                class="btn btn-sm btn-secondary mb-4 mt-5">Kurangi</button>
+                            <!-- Gambar 2 -->
+                            <div class="text-start">
+                                <img src="{{ asset('assets/images/sponsor/bajuk.png') }}" alt="Gambar 2"
+                                    style="width: 10rem; height: auto;">
+                            </div>
                         </div>
                     </div>
-                    {{-- Gambar --}}
 
 
 
 
+                    <div class="col-12 px-xxl-5 px-xl-5 px-lg-5 my-3">
+                        <h3 class="mb-2">Gambar</h3>
 
+                        <input type="file" name="gambar_custom_design[]" accept="image/*" class="image-input" />
+                        <br>
+                        <label>Gambar maksimal 2 MB</label>
 
+                        <img id="preview" src="#" alt="Preview Image"
+                            style="display:none; max-width: 200px; margin-top: 10px;" />
+                        <div id="newRowImage"></div>
 
+                        <button id="addRow" type="button" class="btn btn-sm btn-secondary mb-4 mt-5">Tambah
+                            Gambar</button>
+                        <button id="removeRow" type="button" class="btn btn-sm btn-secondary mb-4 mt-5">Kurangi</button>
+                    </div>
                 </div>
-                <div class="d-grid px-5">
-                    <button class="btn-one w-100">Pesan</button>
+                {{-- Gambar --}}
 
-                </div>
-            </form>
+
+
+
+        </div>
+        <div class="d-grid px-5">
+            <button class="btn-one w-100">Pesan</button>
+
+        </div>
+        </form>
 
         </div>
     </section>

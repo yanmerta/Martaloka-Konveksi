@@ -92,16 +92,6 @@ class TransaksiProdukController extends Controller
     {
         $total_harga = 0;
 
-
-        // if ($request->has('id_')) {
-        //     $newKeranjang =  Keranjang::with(['produk.kategori', 'user'])->whereIn('id', array_keys($request->produk_id))->get();
-        // } else {
-
-        //     $newKeranjang =  Keranjang::with(['produk.kategori', 'user'])->where('user_id', Auth::user()->id)->get();
-        // }
-
-
-
         // Cek jika produk ada di transaksi
         $productExist = Keranjang::with(['produk.kategori', 'user', 'produk' => function ($query) use ($request) {
             $query->whereIn('id', array_keys($request->produk_id));
