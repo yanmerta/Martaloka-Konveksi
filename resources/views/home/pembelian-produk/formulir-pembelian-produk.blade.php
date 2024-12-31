@@ -164,14 +164,14 @@
                                                         <div>
                                                             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/27/BankNegaraIndonesia46-logo.svg/1200px-BankNegaraIndonesia46-logo.svg.png"
                                                                 class="img-fluid text-center ml-3" alt=""
-                                                                style="max-height: 50px;">
+                                                                width="70" height="50">
                                                         </div>
 
                                                     </label>
 
                                                 </div>
                                                 <div class="ms-2">
-                                                    <p class="mb-0">No.rek : <b> 7543216</b> <br>
+                                                    <p class="mb-0">No.rek : <b> 0150205035551</b> <br>
                                                         <b> a.n Putu Sedana Yasa</b>
                                                     </p>
                                                 </div>
@@ -184,9 +184,9 @@
                                                         value="BRI" class="mt-1 me-2">
                                                     <label for="bank_bri" class="d-flex align-items-start">
                                                         <div>
-                                                            <img src="https://media.suara.com/pictures/970x544/2024/06/04/49528-logo-bri-logo-bank-bri.jpg"
+                                                            <img src="http://1.bp.blogspot.com/-THibJz4NpO0/UNhEbur9-fI/AAAAAAAAEQM/b5J4fwEPD-c/s1600/Logo+Bank+BCA.JPG"
                                                                 class="img-fluid text-center ml-3" alt=""
-                                                                style="max-height: 50px;">
+                                                                width="100" height="50">
                                                         </div>
 
                                                     </label>
@@ -229,7 +229,7 @@
                                                         <div>
                                                             <img src="https://cdn.antaranews.com/cache/1200x800/2022/04/25/dana.jpg"
                                                                 class="img-fluid text-center ml-3" alt=""
-                                                                style="max-height: 50px;">
+                                                                width="70" height="50">
                                                         </div>
 
                                                     </label>
