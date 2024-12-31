@@ -76,7 +76,7 @@
                                                 <h5 class="card-title">Tanggal dan Jam Ambil</h5>
                                                 <input type="text" class="form-control" id="tanggal_ambil"
                                                     name="tanggal_ambil"
-                                                    value="{{ $transaksi->tanggal_ambil ? $transaksi->tanggal_ambil->isoFormat('dddd, D MMMM YYYY HH:mm') : 'Tanggal belum ditentukan' }}"
+                                                    value="{{ $transaksi->tanggal_ambil ? \Carbon\Carbon::parse($transaksi->tanggal_ambil)->isoFormat('dddd, D MMMM YYYY HH:mm') : 'Tanggal belum ditentukan' }}"
                                                     readonly>
                                             </div>
 
