@@ -163,6 +163,9 @@
 
                 </div>
                 {{-- <button class="btn btn-block btn-one mt-5" type="submit">CHECKOUT</button> --}}
+                <div class="d-flex justify-content-center mt-4">
+                    {{ $transaksis->links('pagination::bootstrap-5') }}
+                </div>
             @endif
 
 

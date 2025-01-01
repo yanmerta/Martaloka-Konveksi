@@ -220,11 +220,15 @@ class TransaksiProdukController extends Controller
     public function daftarTransaksiPembelian()
     {
         $data['judul'] = 'Daftar transaksi pembelian anda';
-
-        $data['transaksis'] = Transaksi::with(['detailTransaksi.produk', 'user','progress'])->where('user_id', Auth::id())->get();
-        // dd($data['transaksis']);
+    
+        // Gunakan paginate untuk membatasi jumlah data per halaman
+        $data['transaksis'] = Transaksi::with(['detailTransaksi.produk', 'user', 'progress'])
+            ->where('user_id', Auth::id())
+            ->paginate(2); // Tampilkan 10 transaksi per halaman
+    
         return view('home.pembelian-produk.transaksi', $data);
     }
+    
 
 
     public function getProgress($progress)

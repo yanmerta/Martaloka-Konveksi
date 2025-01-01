@@ -128,6 +128,9 @@
 
                     </div>
                 </form>
+                <div class="d-flex justify-content-center mt-4">
+                    {{ $customs->links('pagination::bootstrap-5') }}
+                </div>
             @endif
 
 

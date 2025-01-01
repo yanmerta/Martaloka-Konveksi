@@ -17,11 +17,14 @@ class TransaksiCustomDesignController extends Controller
 {
 
     public function daftarCustom()
-    {
-        $data['customs'] = TransaksiCustomDesign::with(['progress','designs'])->where('user_id', Auth::user()->id)->get();
+{
+    $data['customs'] = TransaksiCustomDesign::with(['progress', 'designs'])
+        ->where('user_id', Auth::id()) 
+        ->paginate(6); // Batasi 2 transaksi custom per halaman
 
-        return view('home.custom-design.custom-index', $data);
-    }
+    return view('home.custom-design.custom-index', $data);
+}
+
     public function createDesign()
     {
 
