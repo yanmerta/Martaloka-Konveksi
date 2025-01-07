@@ -137,14 +137,14 @@
     </div>
 
     <!-- Grafik Pendapatan -->
-    <div class="export-buttons">
+    {{-- <div class="export-buttons">
         <a href="{{ route('dashboard.exportPdf', ['year' => $selectedYear]) }}" class="btn btn-danger btn-sm">
             <i class="fas fa-file-pdf"></i> Export PDF
         </a>
         <a href="{{ route('dashboard.exportExcel', ['year' => $selectedYear]) }}" class="btn btn-success btn-sm">
             <i class="fas fa-file-excel"></i> Export Excel
         </a>
-    </div>
+    </div> --}}
     <div class="row mt-4">
         <div class="col-12">
             <div class="card">
