@@ -209,7 +209,7 @@
                                                     <hr>
                                                 </div>
 
-                                                <div class="px-5 py-3">
+                                                {{-- <div class="px-5 py-3">
                                                     <div class="d-flex align-items-start">
                                                         <input type="radio" name="metode_pembayaran" id="bank_bri"
                                                             value="BRI" class="mt-1 me-2">
@@ -228,7 +228,7 @@
                                                         </p>
                                                     </div>
                                                     <hr>
-                                                </div>
+                                                </div> --}}
 
                                                 <div class="px-5 py-3">
                                                     <div class="d-flex align-items-start">
