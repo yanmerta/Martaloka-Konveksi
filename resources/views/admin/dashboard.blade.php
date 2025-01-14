@@ -14,7 +14,7 @@
                         class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-
+        {{-- 
         <div class="col-lg-3 col-6">
             <div class="small-box bg-warning">
                 <div class="inner">
@@ -25,6 +25,19 @@
                     <i class="ion ion-android-person-add"></i>
                 </div>
                 <a href="{{ route('users.index') }}" class="small-box-footer">More info <i
+                        class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div> --}}
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-warning">
+                <div class="inner">
+                    <h3>{{ $jumlah_transaksi_berlangsung }}</h3>
+                    <p>Transaksi Sedang Berlangsung</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-clock"></i>
+                </div>
+                <a href="{{ route('transaksi.index') }}" class="small-box-footer">More info <i
                         class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>

@@ -38,10 +38,12 @@ class DashboardController extends Controller
         ];
     }
 
-    $data['jumlah_pengguna'] = User::count();
+    // $data['jumlah_pengguna'] = User::count();
     $data['jumlah_produk'] = Produk::count();
     $data['jumlah_transaksiproduk'] = Transaksi::count();
     $data['jumlah_transaksicostum'] = TransaksiCustomDesign::count();
+    $data['jumlah_transaksi_berlangsung'] = Transaksi::whereIn('status_pembayaran', ['Dalam Transaksi', 'Dibayar', 'Belum Dibayar'])
+    ->count();
 
     // Tambahkan data transaksi terbaru
     $data['transaksi_terbaru'] = Transaksi::with(['user', 'detailTransaksi.produk'])

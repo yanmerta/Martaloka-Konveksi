@@ -193,7 +193,7 @@
                                                             value="BNI" class="mt-1 me-2" required>
                                                         <label for="bank_bni" class="d-flex align-items-start">
                                                             <div>
-                                                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/27/BankNegaraIndonesia46-logo.svg/1200px-BankNegaraIndonesia46-logo.svg.png"
+                                                                <img src="https://bpletiaracourse.net/wp-content/uploads/2021/10/logo-bank-bpd-bali.png"
                                                                     class="img-fluid text-center ml-3" alt=""
                                                                     width="70" height="50">
                                                             </div>
