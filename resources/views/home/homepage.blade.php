@@ -19,7 +19,8 @@
                                 </div>
                                 <style>
                                     .big-title h2 {
-                                        white-space: pre-line; /* Membuat line breaks dari spasi/enter di HTML terlihat */
+                                        white-space: pre-line;
+                                        /* Membuat line breaks dari spasi/enter di HTML terlihat */
                                     }
                                 </style>
                                 <div class="text">
@@ -446,7 +447,7 @@
                     </a>
                 </div>
             </div>
-        
+
             <div class="auto-container">
                 <div class="row">
                     <div class="col-xl-6">
@@ -468,7 +469,8 @@
                                     </a>
                                 </div>
                                 <div class="btns-box">
-                                    <a class="btn-one btn-one--style4 btn-wide" href="assets/pdf/panduan desain.pdf" target="PanduanDesainPDF">
+                                    <a class="btn-one btn-one--style4 btn-wide" href="assets/pdf/panduan desain.pdf"
+                                        target="PanduanDesainPDF">
                                         <span class="txt">
                                             <i class="icon-right-arrow-1"></i>
                                             Panduan Desain
@@ -478,7 +480,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="col-xl-6">
                         <div class="academy-slogan-content-one academy-slogan-content-one--style2">
                             <div class="academy-slogan-content-one__bg"
@@ -497,7 +499,8 @@
                                     </a>
                                 </div>
                                 <div class="btns-box">
-                                    <a class="btn-one btn-one--style4 btn-wide" href="assets/pdf/panduan desain.pdf" target="PanduanDesainPDF">
+                                    <a class="btn-one btn-one--style4 btn-wide"
+                                        href="assets/pdf/Panduan Pemesanan Custome Desain.pdf" target="PanduanDesainPDF">
                                         <span class="txt">
                                             <i class="icon-right-arrow-1"></i>
                                             Panduan Pemesanan
@@ -509,7 +512,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Video Container (disembunyikan di awal) -->
             <div id="videoContainer" class="video-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000;">
                 <button class="close-video" onclick="closeVideo()" style="position: absolute; top: 10px; right: 20px; font-size: 24px; color: white; background: none; border: none; cursor: pointer;">×</button>
@@ -534,90 +537,11 @@
             </div>
         </section>
         
-        <script>
-            function showVideoContainer(event) {
-                event.preventDefault();
-                const videoContainer = document.getElementById('videoContainer');
-                const video = document.getElementById('assetVideo');
-                video.pause();
-                video.currentTime = 0;
-                videoContainer.style.display = 'block';
-            }
-        
-            function closeVideo() {
-                const videoContainer = document.getElementById('videoContainer');
-                const video = document.getElementById('assetVideo');
-                video.pause();
-                video.style.display = 'none';
-                videoContainer.style.display = 'none';
-            }
-        
-            function playVideo() {
-                const video = document.getElementById('assetVideo');
-                video.style.display = 'block';
-                video.play();
-            }
-        
-            function backToPage() {
-                const videoContainer = document.getElementById('videoContainer');
-                const video = document.getElementById('assetVideo');
-                video.pause();
-                video.currentTime = 0; // Reset video playback
-                videoContainer.style.display = 'none';
-                window.location.href = '/'; // Redirect to the homepage
-            }
-        </script>
-        
-        <script>
-            function showVideoContainer(event) {
-                event.preventDefault();
-                const videoContainer = document.getElementById('videoContainer');
-                videoContainer.style.display = 'block';
-            }
-        
-            function closeVideo() {
-                const videoContainer = document.getElementById('videoContainer');
-                const video = document.getElementById('assetVideo');
-                video.pause();
-                video.style.display = 'none';
-                videoContainer.style.display = 'none';
-            }
-        
-            function playVideo() {
-                const video = document.getElementById('assetVideo');
-                video.style.display = 'block';
-                video.play();
-            }
-        </script>
-        
-        
-        <script>
-            function showVideoContainer(event) {
-                event.preventDefault();
-                const videoContainer = document.getElementById('videoContainer');
-                videoContainer.style.display = 'block';
-            }
-        
-            function closeVideo() {
-                const videoContainer = document.getElementById('videoContainer');
-                const video = document.getElementById('assetVideo');
-                video.pause();
-                video.style.display = 'none';
-                videoContainer.style.display = 'none';
-            }
-        
-            function playVideo() {
-                const video = document.getElementById('assetVideo');
-                video.style.display = 'block';
-                video.play();
-            }
-        </script>
-        
-        
         <style>
             /* Video Container Style */
             .video-container {
-                display: none; /* Video tersembunyi di awal */
+                display: none;
+                /* Video tersembunyi di awal */
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -628,22 +552,23 @@
                 align-items: center;
                 justify-content: center;
             }
-        
+
             .video-wrapper {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                width: 80%; /* Kontrol lebar maksimal video */
+                width: 80%;
+                /* Kontrol lebar maksimal video */
                 max-width: 700px;
             }
-        
+
             .video-container video {
                 width: 100%;
                 height: auto;
                 object-fit: contain;
             }
-        
+
             /* Tombol tutup dan kontrol video */
             .close-video {
                 position: absolute;
@@ -654,15 +579,16 @@
                 cursor: pointer;
                 z-index: 1000000;
             }
-        
+
             .video-controls {
                 margin-top: 15px;
                 display: flex;
                 justify-content: center;
                 gap: 20px;
-                width: 100%; /* Full width to center the buttons */
+                width: 100%;
+                /* Full width to center the buttons */
             }
-        
+
             .video-back-btn,
             .video-next-btn {
                 background: #ffffff;
@@ -672,41 +598,41 @@
                 font-size: 16px;
                 cursor: pointer;
             }
-        
+
             #videoDuration {
                 color: white;
                 font-size: 16px;
                 margin-left: 20px;
             }
         </style>
-        
+
         <script>
             function showAndPlayVideo(event) {
                 event.preventDefault();
-                document.body.style.overflow = 'hidden';  // Mencegah scrolling saat video tampil
-                document.getElementById("videoContainer").style.display = "flex";  // Tampilkan video
+                document.body.style.overflow = 'hidden'; // Mencegah scrolling saat video tampil
+                document.getElementById("videoContainer").style.display = "flex"; // Tampilkan video
                 document.getElementById("assetVideo").play();
                 updateVideoDuration(); // Update durasi video saat dimulai
             }
-        
+
             function closeVideo() {
-                document.body.style.overflow = 'auto';  // Kembalikan kemampuan scrolling
-                document.getElementById("videoContainer").style.display = "none";  // Sembunyikan video
+                document.body.style.overflow = 'auto'; // Kembalikan kemampuan scrolling
+                document.getElementById("videoContainer").style.display = "none"; // Sembunyikan video
                 document.getElementById("assetVideo").pause();
-                document.getElementById("assetVideo").currentTime = 0;  // Reset video ke awal
+                document.getElementById("assetVideo").currentTime = 0; // Reset video ke awal
             }
-        
+
             function backToPage() {
                 closeVideo();
             }
-        
+
             function skipToStudio() {
                 document.getElementById("assetVideo").pause();
                 setTimeout(() => {
                     window.location.href = 'https://studio.morflax.com/clothing-mockups/create?element=t-shirt-man';
-                }, 500);  // Delay untuk memastikan video berhenti sebelum navigasi
+                }, 500); // Delay untuk memastikan video berhenti sebelum navigasi
             }
-        
+
             // Update durasi video saat metadata dimuat
             function updateVideoDuration() {
                 const videoElement = document.getElementById("assetVideo");
@@ -716,7 +642,7 @@
                     videoDurationElement.innerHTML = `Duration: ${duration}`;
                 };
             }
-        
+
             // Format waktu menjadi mm:ss
             function formatTime(seconds) {
                 const minutes = Math.floor(seconds / 60);

@@ -75,13 +75,13 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Nama Pemesan</th>
-                    <th scope="col">Status Transaksi</th>
+                    <th style="width: 15%" scope="col">Nama Pemesan</th>
+                    <th style="width: 15%"scope="col">Status Transaksi</th>
                     <th scope="col" class="w-25">Produk - Qty - Harga</th>
-                    <th scope="col">Total Harga</th>
-                    <th scope="col">Bukti Pembayaran</th>
+                    <th style="width: 10%" scope="col">Total Harga</th>
+                    <th style="width: 15%" scope="col">Bukti Pembayaran</th>
                     <th>Delivery</th>
-                    <th>Action</th>
+                    <th class="text-center">Action</th>
                 </tr>
             </thead>
             <tbody>

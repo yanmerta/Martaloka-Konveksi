@@ -9,6 +9,10 @@
                 value="{{ $kategori->nama_kategori }}">
         </div>
 
+        <div class="form-group mb-3">
+            <label for="">Harga Kategori</label>
+            <input id="" class="form-control" type="integer" name="harga_kategori"  value="{{ $kategori->harga_kategori }}">
+        </div>
         <button type="submit" class="btn btn-primary">
             Update
         </button>

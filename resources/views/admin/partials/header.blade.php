@@ -7,6 +7,16 @@
             </a>
         </li>
     </ul>
+    <!-- Center: Date and Time -->
+    <div class="navbar-text d-flex align-items-center" id="date-time" style="font-size: 15px; font-weight: 600;"></div>
+
+    <li class="nav-item mr-25">
+        <a class="nav-link nav-link-style" data-toggle="tooltip" data-placement="top" title="Ganti Tema">
+            <i id="theme-icon-a" class="ficon" data-feather="sun" style="display:none;"></i>
+            <i id="theme-icon-b" class="ficon" data-feather="moon"></i>
+        </a>
+    </li>
+
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto d-flex align-items-center">
         <!-- Notification Dropdown -->
@@ -63,7 +73,7 @@
 <!-- Custom CSS -->
 <style>
     .navbar-nav .nav-item {
-        margin-left: 10px;
+        margin-left: 8px;
     }
 
     .user-panel .info {
@@ -122,6 +132,44 @@
         width: 300px;
         max-height: 400px;
         overflow-y: auto;
+    }
+
+
+    #date-time {
+        font-size: 16px;
+        color: #555;
+        margin-left: 15px;
+        /* Adjust spacing */
+    }
+
+    .nav-item.mr-25 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-link.nav-link-style {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: transparent;
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ficon {
+        font-size: 20px;
+        line-height: 1;
+        display: inline-block;
+        color: inherit;
+        margin: 0;
+        padding: 0;
     }
 </style>
 
@@ -248,5 +296,35 @@
         // Load notifications initially and set refresh interval
         loadNotifications();
         setInterval(loadNotifications, 30000); // Refresh every 30 seconds
+        // Function to update date and time
+        function updateDateTime() {
+            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+            const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus",
+                "September", "Oktober", "November", "Desember"
+            ];
+
+            const now = new Date();
+            const day = days[now.getDay()];
+            const date = now.getDate();
+            const month = months[now.getMonth()];
+            const year = now.getFullYear();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            // Format: "Senin, 26 November 2024 | 12:34:56"
+            const formattedDateTime = `${day}, ${date} ${month} ${year} | ${hours}:${minutes}:${seconds}`;
+
+            // Update the element
+            document.getElementById("date-time").innerText = formattedDateTime;
+        }
+
+        // Run the function every second
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); // Initialize immediately
     });
+</script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+    feather.replace()
 </script>

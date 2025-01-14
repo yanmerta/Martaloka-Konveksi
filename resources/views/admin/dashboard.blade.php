@@ -14,7 +14,7 @@
                         class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-
+        {{-- 
         <div class="col-lg-3 col-6">
             <div class="small-box bg-warning">
                 <div class="inner">
@@ -25,6 +25,19 @@
                     <i class="ion ion-android-person-add"></i>
                 </div>
                 <a href="{{ route('users.index') }}" class="small-box-footer">More info <i
+                        class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div> --}}
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-warning">
+                <div class="inner">
+                    <h3>{{ $jumlah_transaksi_berlangsung }}</h3>
+                    <p>Transaksi Sedang Berlangsung</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-clock"></i>
+                </div>
+                <a href="{{ route('transaksi.index') }}" class="small-box-footer">More info <i
                         class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
@@ -57,17 +70,55 @@
             </div>
         </div>
     </div>
-    <form method="GET" action="{{ route('dashboard') }}" class="mb-4">
-        <div class="form-group">
-            <label for="year">Pilih Tahun:</label>
-            <select name="year" id="year" class="form-control" onchange="this.form.submit()">
-                @for ($i = 2024; $i <= now()->year + 5; $i++)
-                    <option value="{{ $i }}" {{ $selectedYear == $i ? 'selected' : '' }}>{{ $i }}
-                    </option>
-                @endfor
-            </select>
+    <form method="GET" action="{{ route('dashboard') }}" class="mb-1">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="year">Pilih Tahun:</label>
+                    <select name="year" id="year" class="form-control">
+                        @for ($i = 2024; $i <= now()->year + 5; $i++)
+                            <option value="{{ $i }}" {{ $selectedYear == $i ? 'selected' : '' }}>
+                                {{ $i }}
+                            </option>
+                        @endfor
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="month">Pilih Bulan:</label>
+                    <select name="month" id="month" class="form-control">
+                        <option value="">Semua Bulan</option>
+                        <option value="1" {{ request('month') == '1' ? 'selected' : '' }}>Januari</option>
+                        <option value="2" {{ request('month') == '2' ? 'selected' : '' }}>Februari</option>
+                        <option value="3" {{ request('month') == '3' ? 'selected' : '' }}>Maret</option>
+                        <option value="4" {{ request('month') == '4' ? 'selected' : '' }}>April</option>
+                        <option value="5" {{ request('month') == '5' ? 'selected' : '' }}>Mei</option>
+                        <option value="6" {{ request('month') == '6' ? 'selected' : '' }}>Juni</option>
+                        <option value="7" {{ request('month') == '7' ? 'selected' : '' }}>Juli</option>
+                        <option value="8" {{ request('month') == '8' ? 'selected' : '' }}>Agustus</option>
+                        <option value="9" {{ request('month') == '9' ? 'selected' : '' }}>September</option>
+                        <option value="10" {{ request('month') == '10' ? 'selected' : '' }}>Oktober</option>
+                        <option value="11" {{ request('month') == '11' ? 'selected' : '' }}>November</option>
+                        <option value="12" {{ request('month') == '12' ? 'selected' : '' }}>Desember</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+                <div class="form-group mr-2">
+                    <button type="submit" class="btn btn-secondary">
+                        <i class="fas fa-filter mr-1"></i> Filter
+                    </button>
+                </div>
+                <div class="form-group">
+                    <a href="{{ route('dashboard') }}" class="btn btn-warning">
+                        <i class="fas fa-sync-alt mr-1"></i> Reset
+                    </a>
+                </div>
+            </div>
         </div>
     </form>
+
 
     <!-- Grafik Transaksi -->
     <div class="row">
@@ -99,6 +150,14 @@
     </div>
 
     <!-- Grafik Pendapatan -->
+    {{-- <div class="export-buttons">
+        <a href="{{ route('dashboard.exportPdf', ['year' => $selectedYear]) }}" class="btn btn-danger btn-sm">
+            <i class="fas fa-file-pdf"></i> Export PDF
+        </a>
+        <a href="{{ route('dashboard.exportExcel', ['year' => $selectedYear]) }}" class="btn btn-success btn-sm">
+            <i class="fas fa-file-excel"></i> Export Excel
+        </a>
+    </div> --}}
     <div class="row mt-4">
         <div class="col-12">
             <div class="card">

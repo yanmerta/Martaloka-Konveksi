@@ -13,6 +13,10 @@
                     <label for="">Nama Kategori</label>
                     <input id="" class="form-control" type="text" name="nama_kategori">
                 </div>
+                <div class="form-group mb-3">
+                    <label for="">Harga Kategori</label>
+                    <input id="" class="form-control" type="integer" name="harga_kategori">
+                </div>
                 <button type="submit" class="btn btn-primary">
                     Tambahkan
                 </button>

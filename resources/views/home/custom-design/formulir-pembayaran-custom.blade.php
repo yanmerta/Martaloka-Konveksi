@@ -76,7 +76,7 @@
                                                 <h5 class="card-title">Tanggal dan Jam Ambil</h5>
                                                 <input type="text" class="form-control" id="tanggal_ambil"
                                                     name="tanggal_ambil"
-                                                    value="{{ $transaksiCustomDesign->tanggal_ambil ? $transaksiCustomDesign->tanggal_ambil->isoFormat('dddd, D MMMM YYYY HH:mm') : 'Tanggal belum ditentukan' }}"
+                                                    value="{{ $transaksiCustomDesign->tanggal_ambil ? \Carbon\Carbon::parse($transaksiCustomDesign->tanggal_ambil)->isoFormat('dddd,HH:mm D MMMM Y') : 'Tanggal belum ditentukan' }}"
                                                     readonly>
                                             </div>
 
@@ -193,42 +193,42 @@
                                                             value="BNI" class="mt-1 me-2" required>
                                                         <label for="bank_bni" class="d-flex align-items-start">
                                                             <div>
-                                                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/27/BankNegaraIndonesia46-logo.svg/1200px-BankNegaraIndonesia46-logo.svg.png"
+                                                                <img src="https://bpletiaracourse.net/wp-content/uploads/2021/10/logo-bank-bpd-bali.png"
                                                                     class="img-fluid text-center ml-3" alt=""
-                                                                    style="max-height: 50px;">
+                                                                    width="70" height="50">
                                                             </div>
 
                                                         </label>
 
                                                     </div>
                                                     <div class="ms-2">
-                                                        <p class="mb-0">No.rek : <b> 7543216</b> <br>
-                                                            <b> a.n Putu Suarbawa</b>
+                                                        <p class="mb-0">No.rek : <b> 0150205035551</b> <br>
+                                                            <b> a.n Putu Sedana Yasa</b>
                                                         </p>
                                                     </div>
                                                     <hr>
                                                 </div>
 
-                                                <div class="px-5 py-3">
+                                                {{-- <div class="px-5 py-3">
                                                     <div class="d-flex align-items-start">
                                                         <input type="radio" name="metode_pembayaran" id="bank_bri"
                                                             value="BRI" class="mt-1 me-2">
                                                         <label for="bank_bri" class="d-flex align-items-start">
                                                             <div>
-                                                                <img src="https://media.suara.com/pictures/970x544/2024/06/04/49528-logo-bri-logo-bank-bri.jpg"
+                                                                <img src="http://1.bp.blogspot.com/-THibJz4NpO0/UNhEbur9-fI/AAAAAAAAEQM/b5J4fwEPD-c/s1600/Logo+Bank+BCA.JPG"
                                                                     class="img-fluid text-center ml-3" alt=""
-                                                                    style="max-height: 50px;">
+                                                                    width="100" height="50">
                                                             </div>
 
                                                         </label>
                                                     </div>
                                                     <div class="ms-2">
-                                                        <p class="mb-0">No.rek : <b> 7543216 </b> <br>
-                                                            a.n <b> Putu Suarbawa</b>
+                                                        <p class="mb-0">No.rek : <b> 7543216892 </b> <br>
+                                                            a.n <b> Putu Sedana Yasa</b>
                                                         </p>
                                                     </div>
                                                     <hr>
-                                                </div>
+                                                </div> --}}
 
                                                 <div class="px-5 py-3">
                                                     <div class="d-flex align-items-start">
@@ -245,8 +245,8 @@
 
                                                     </div>
                                                     <div class="ms-2">
-                                                        <p class="mb-0">OVO : <b> 085100000000</b> <br>
-                                                            <b> a.n Putu Suarbawa</b>
+                                                        <p class="mb-0">OVO : <b> 081337344259</b> <br>
+                                                            <b> a.n Putu Sedana Yasa</b>
                                                         </p>
                                                     </div>
                                                     <hr>
@@ -260,14 +260,14 @@
                                                             <div>
                                                                 <img src="https://cdn.antaranews.com/cache/1200x800/2022/04/25/dana.jpg"
                                                                     class="img-fluid text-center ml-3" alt=""
-                                                                    style="max-height: 50px;">
+                                                                    width="70" height="50">
                                                             </div>
 
                                                         </label>
                                                     </div>
                                                     <div class="ms-2">
-                                                        <p class="mb-0">Dana : <b> 085100000000</b> <br>
-                                                            <b> a.n Putu Suarbawa</b>
+                                                        <p class="mb-0">Dana : <b> 085847728414</b> <br>
+                                                            <b> a.n Putu Sedana Yasa</b>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -302,7 +302,7 @@
                                                                 <div class="d-flex align-items-start">
                                                                     <label for="bank_bri" class="d-flex align-items-start">
                                                                         <div>
-                                                                            <img src="https://media.suara.com/pictures/970x544/2024/06/04/49528-logo-bri-logo-bank-bri.jpg"
+                                                                            <img src="http://1.bp.blogspot.com/-THibJz4NpO0/UNhEbur9-fI/AAAAAAAAEQM/b5J4fwEPD-c/s1600/Logo+Bank+BCA.JPG"
                                                                                 class="img-fluid text-center ml-3" alt=""
                                                                                 style="max-height: 50px;">
                                                                         </div>

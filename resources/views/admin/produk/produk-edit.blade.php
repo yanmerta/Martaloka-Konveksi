@@ -35,7 +35,7 @@
                 <label for="">Gambar Produk</label>
                 <input id="" class="form-control" type="file" name="gambar_produk" accept="image/*">
             </div>
-            <button class="btn btn-primary mt-3" type="submit">Update</button>
+            <button class="btn btn-primary mt-1" type="submit">Update</button>
         </form>
     </div>
 

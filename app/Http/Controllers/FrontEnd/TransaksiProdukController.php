@@ -92,16 +92,6 @@ class TransaksiProdukController extends Controller
     {
         $total_harga = 0;
 
-
-        // if ($request->has('id_')) {
-        //     $newKeranjang =  Keranjang::with(['produk.kategori', 'user'])->whereIn('id', array_keys($request->produk_id))->get();
-        // } else {
-
-        //     $newKeranjang =  Keranjang::with(['produk.kategori', 'user'])->where('user_id', Auth::user()->id)->get();
-        // }
-
-
-
         // Cek jika produk ada di transaksi
         $productExist = Keranjang::with(['produk.kategori', 'user', 'produk' => function ($query) use ($request) {
             $query->whereIn('id', array_keys($request->produk_id));
@@ -230,11 +220,15 @@ class TransaksiProdukController extends Controller
     public function daftarTransaksiPembelian()
     {
         $data['judul'] = 'Daftar transaksi pembelian anda';
-
-        $data['transaksis'] = Transaksi::with(['detailTransaksi.produk', 'user','progress'])->where('user_id', Auth::id())->get();
-        // dd($data['transaksis']);
+    
+        // Gunakan paginate untuk membatasi jumlah data per halaman
+        $data['transaksis'] = Transaksi::with(['detailTransaksi.produk', 'user', 'progress'])
+            ->where('user_id', Auth::id())
+            ->paginate(5); // Tampilkan 10 transaksi per halaman
+    
         return view('home.pembelian-produk.transaksi', $data);
     }
+    
 
 
     public function getProgress($progress)

@@ -99,8 +99,8 @@
                     <th scope="col">Total Harga</th>
                     <th scope="col">Bukti Pembayaran</th>
                     <th>Tanggal Pesan</th>
-                    <th>Delivery</th>
-                    <th>Action</th>
+                    <th class="text-center">Delivery</th>
+                    <th class="text-center">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -191,7 +191,8 @@
                                         data-bs-toggle="modal" data-bs-target="#tolakModal"
                                         data-transaksi-id="{{ $data->id }}">Tolak
                                         transaksi</button>
-                                        @break
+                                @break
+
                                 @case('Diterima')
                                     <a href="{{ route('transaksiCustom.selesaikan', $data->id) }}"
                                         class="btn btn-block btn-success">Selesaikan Transaksi</a>
@@ -279,7 +280,8 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Tanggal dan Jam Ambil</label>
-                            <input type="datetime-local" class="form-control" id="tanggal_ambil" name="tanggal_ambil">
+                            <input type="datetime-local" class="form-control" id="tanggal_ambil"
+                                name="tanggal_ambil">
                         </div>
 
                     </div>

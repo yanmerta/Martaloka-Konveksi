@@ -39,7 +39,94 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('assets/css/dark-mode.css') }}">
 </head>
+
+<style>
+    #content-wrapper {
+        min-height: 100vh !important;
+        margin-left: 250px;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+        #content-wrapper {
+
+            margin-left: unset;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        #content-wrapper {
+
+            margin-left: unset;
+        }
+    }
+
+    .dark-mode #content-wrapper {
+        min-height: 100vh !important;
+        margin-left: 250px;
+        background-color: #252525;
+    }
+
+    /* Footer di Mode Malam */
+    body.dark-mode .main-footer {
+        background-color: #252525;
+        color: #e0e0e0;
+        /* Teks terang */
+        border-top: 1px solid #333;
+        /* Border atas */
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode .main-footer a {
+        color: #ffffff;
+        /* Warna link di footer */
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    body.dark-mode .main-footer a:hover {
+        color: #0099ff;
+        /* Warna link saat hover */
+    }
+
+    /* Dark mode untuk input range tanggal */
+    body.dark-mode .form-control {
+        background-color: #252525;
+        color: #e0e0e0;
+        border: 1px solid #333;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode .form-control::placeholder {
+        color: #555;
+    }
+
+    body.dark-mode .daterangepicker {
+        background-color: #252525;
+        /* Background hitam */
+        color: #e0e0e0;
+        /* Teks terang */
+    }
+
+    body.dark-mode .daterangepicker .calendar-table {
+        background-color: #252525;
+        color: #e0e0e0;
+    }
+
+    body.dark-mode .daterangepicker .ranges li.active {
+        background-color: #333;
+        color: #fff;
+    }
+
+    body.dark-mode .form-control {
+        background-color: #252525 !important;
+        color: #e0e0e0 !important;
+        border-color: #555 !important;
+    }
+</style>
+
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -54,13 +141,13 @@
         @include('admin.partials.sidebar')
 
 
-        <div class="content-wrapper">
+        <div id="content-wrapper">
 
             <div class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="ml-1">{{ $judul ?? 'Dashboard' }}</h1>
+                            <h1 class="ml-0">{{ $judul ?? 'Dashboard' }}</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -89,8 +176,11 @@
             @include('admin.partials.popup-login-success')
         @endif
 
+        @include('admin.partials.footer')
 
         <!-- jQuery -->
+        <!-- Dark Mode Script -->
+        <script src="{{ asset('assets/js/dark-mode.js') }}"></script>
         <script src="{{ asset('admin/dist/plugins/jquery/jquery.min.js') }}"></script>
         <!-- jQuery UI 1.11.4 -->
         <script src="{{ asset('admin/dist/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
@@ -157,6 +247,10 @@
                 }, 3000); // 3000 ms = 3 seconds
             });
         </script>
+    </div>
+
+
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
